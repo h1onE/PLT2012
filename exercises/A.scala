@@ -134,7 +134,11 @@ list123 match {
 // a) Please write a function to calculate the sum of a list of
 //    integers by pattern matching.
 
-   // def sum(list : List[Int]) : Int = list match { ... }
+
+   def sum(list : List[Int]) : Int = list match { 
+      case Nil => 0
+      case x :: xs => x + sum (xs)
+   }
 
 // b) Write a pretty-printer for lists of integers by pattern
 //    matching:
